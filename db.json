@@ -1,0 +1,32 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "react çalış",
+      "status": "important",
+      "date": "2024-01-21"
+    },
+    {
+      "id": "2",
+      "title": "son projeyi tamamla",
+      "status": "job",
+      "date": "2024-02-20"
+    },
+    {
+      "id": "3",
+      "title": "js ile proje yap",
+      "status": "daily",
+      "date": "2024-03-20"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Buse"
+    },
+    {
+      "id": "2",
+      "name": "Caner"
+    }
+  ]
+}
