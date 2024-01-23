@@ -1,15 +1,27 @@
 import { useEffect, useState } from "react";
 import Form from "./components/Form";
 import ListItem from "./components/ListItem";
+import axios from "axios";
+
+axios.defaults.baseURL = `http://localhost:3000`;
 
 function App() {
   const [todos, setTodos] = useState(null);
   // bileşenin ekrana basılma olayını izliyoruz.
   useEffect(() => {
     // apiden verileri alır.
-    fetch("http://localhost:3000/todos")
-      .then((res) => res.json())
-      .then((data) => setTodos(data));
+    axios
+      .get("/todos", {
+        timeout: 3000,
+        timeoutErrorMessage: "zaman aşımı",
+      })
+      .then((res) => setTodos(res.data))
+      .catch((err) => {
+        console.log(err);
+        if (err.message === "zaman aşımı") {
+          alert("istek zaman aşımına uğradı");
+        }
+      });
   }, []);
 
   return (
@@ -17,13 +29,13 @@ function App() {
       <h2 className="text-center">
         Server <span className="text-warning">Crud</span>
       </h2>
-      <Form />
+      <Form setTodos={setTodos} />
 
       <ul className="list-group">
         {!todos && <p className="spinner-border text-primary"></p>}
         {todos?.map((todo) => (
           // prop olarak gönderdik. hata vermemesi için benzersiz bir key oluşturduk.
-          <ListItem key={todo.id} todo={todo} />
+          <ListItem key={todo.id} todo={todo} setTodos={setTodos} />
         ))}
       </ul>
     </div>
