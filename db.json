@@ -1,5 +1,48 @@
 {
-  "todos": [],
+  "todos": [
+    {
+      "id": "80b6e288-2cc9-460c-8f94-f095ae53e8ea",
+      "title": "tarihleri kontrol et",
+      "status": "important",
+      "date": "28.01.2024"
+    },
+    {
+      "id": "afa9ad61-370d-48cc-bd2e-a1c4b8a4cc8c",
+      "title": "react çalış",
+      "status": "daily",
+      "date": "28.01.2024"
+    },
+    {
+      "id": "52ec1f06-f17f-4386-b4fb-c7c02bf7be64",
+      "title": "axios öğren",
+      "status": "job",
+      "date": "28.01.2024"
+    },
+    {
+      "id": "e320c057-75ee-4d19-b490-f8f80088b559",
+      "title": "useeffect bak",
+      "status": "default",
+      "date": "28.01.2024"
+    },
+    {
+      "id": "dfe98758-82bc-4401-9922-e81de2fcc4fb",
+      "title": "js çalış",
+      "status": "Varsayılan",
+      "date": "28.01.2024"
+    },
+    {
+      "id": "9e0fa9aa-6de4-420c-bfa9-a146a3f8317f",
+      "title": "spor yap",
+      "status": "Varsayılan",
+      "date": "28.01.2024"
+    },
+    {
+      "id": "6100bb81-5faf-4315-b1ec-ce338c163359",
+      "title": "kitap oku",
+      "status": "Varsayılan",
+      "date": "28.01.2024"
+    }
+  ],
   "users": [
     {
       "id": "1",
